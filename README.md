@@ -110,7 +110,7 @@ Selects the device type using information present in the User-Agent HTTP header.
 [Constructor](http://rdoc.info/github/jistr/mobvious/master/Mobvious/Strategies/MobileESP#initialize-instance_method)
 takes a detection procedure.
 Detection procedure decides what device type it should return based on the
-information it can dig out of MobileESPConverted::UserAgentInfo instance.
+information it can dig out of MobileESP::UserAgentInfo instance.
 
 There are two predefined detection procedures (and you can write your own):
 

@@ -1,4 +1,4 @@
-require 'mobileesp_converted'
+require 'mobileesp'
 
 module Mobvious
   module Strategies
@@ -24,7 +24,7 @@ module Mobvious
       # Creates a new instance of MobileESP strategy.
       #
       # @param detection_procedure
-      #   a lambda function that gets one parameter (`MobileESPConverted::UserAgentInfo` instance)
+      #   a lambda function that gets one parameter (`MobileESP::UserAgentInfo` instance)
       #   and returns device type symbol or nil.  
       #   **or**  
       #   a symbol for one of predefined detection procedures (`:mobile_desktop`,
@@ -44,7 +44,7 @@ module Mobvious
       # @return [Symbol] device type or nil
       def get_device_type(request)
         return nil if request.user_agent.nil? || request.env['HTTP_ACCEPT'].nil?
-        mobileesp = MobileESPConverted::UserAgentInfo.new(request.user_agent, request.env['HTTP_ACCEPT'])
+        mobileesp = ::MobileESP::UserAgentInfo.new(request.user_agent, request.env['HTTP_ACCEPT'])
         @detection_procedure.call(mobileesp)
       end
     end
