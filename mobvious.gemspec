@@ -5,7 +5,7 @@ require "mobvious/version"
 Gem::Specification.new do |s|
   s.name        = "mobvious"
   s.version     = Mobvious::VERSION
-  s.authors     = ["Jiří Stránský"]
+  s.authors     = ["Jiri Stransky"]
   s.email       = ["jistr@jistr.com"]
   s.homepage    = "http://github.com/jistr/mobvious"
   s.summary     = %q{Rack middleware for choosing a version of an interface to render for given request}
